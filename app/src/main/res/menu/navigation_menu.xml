@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_settings"
+        android:title="@string/settings"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_settings"/>
+
+    <item android:id="@+id/menu_players"
+        android:title="@string/players"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_players"/>
+
+    <item android:id="@+id/menu_fixture"
+        android:title="@string/fixture"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_fixture"/>
+
+    <item android:id="@+id/standingsFragment"
+        android:title="@string/standings"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_standings"/>
+
+
+
+</menu>

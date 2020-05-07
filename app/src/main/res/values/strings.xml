@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Football</string>
+
+    <string name="settings">Settings</string>
+    <string name="players">Players</string>
+    <string name="fixture">Fixture</string>
+    <string name="standings">Standings</string>
 </resources>
