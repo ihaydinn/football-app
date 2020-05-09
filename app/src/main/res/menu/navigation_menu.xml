@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menu_settings"
+    <item android:id="@+id/settingFragment"
         android:title="@string/settings"
         app:showAsAction="always"
         android:icon="@drawable/ic_settings"/>
 
-    <item android:id="@+id/menu_players"
+    <item android:id="@+id/playerFragment"
         android:title="@string/players"
         app:showAsAction="always"
         android:icon="@drawable/ic_players"/>
 
-    <item android:id="@+id/menu_fixture"
+    <item android:id="@+id/fixtureFragment"
         android:title="@string/fixture"
         app:showAsAction="always"
         android:icon="@drawable/ic_fixture"/>
