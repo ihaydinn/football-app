@@ -1,28 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="16dp"
-        tools:context=".ui.setting.SettingFragment">
+        android:layout_margin="16dp">
 
-        <Spinner
-            android:id="@+id/spnCountries"
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#FFCC80"/>
-
-        <Spinner
-            android:id="@+id/spnLeagues"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:background="#80DEEA"/>
+            android:layout_height="match_parent">
 
 
+                <RadioButton
+                    android:id="@+id/rbEngland"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ENG - Premier League"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbGermany"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+                <RadioButton
+                    android:id="@+id/rbGermany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GER - Bundesliga"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbSpain"
+                    app:layout_constraintStart_toStartOf="@+id/rbEngland"
+                    app:layout_constraintTop_toBottomOf="@+id/rbEngland" />
+
+                <RadioButton
+                    android:id="@+id/rbSpain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ESP - La Liga"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbFrance"
+                    app:layout_constraintStart_toStartOf="@+id/rbGermany"
+                    app:layout_constraintTop_toBottomOf="@+id/rbGermany" />
+
+                <RadioButton
+                    android:id="@+id/rbFrance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FRA - Ligue 1"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbItaly"
+                    app:layout_constraintStart_toStartOf="@+id/rbSpain"
+                    app:layout_constraintTop_toBottomOf="@+id/rbSpain" />
+
+                <RadioButton
+                    android:id="@+id/rbItaly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ITA - Serie A"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbTurkey"
+                    app:layout_constraintStart_toStartOf="@+id/rbFrance"
+                    app:layout_constraintTop_toBottomOf="@+id/rbFrance" />
+
+                <RadioButton
+                    android:id="@+id/rbTurkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TUR - Super League"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbGreece"
+                    app:layout_constraintStart_toStartOf="@+id/rbItaly"
+                    app:layout_constraintTop_toBottomOf="@+id/rbItaly" />
+
+                <RadioButton
+                    android:id="@+id/rbGreece"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GRE - Super League"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbHolland"
+                    app:layout_constraintStart_toStartOf="@+id/rbTurkey"
+                    app:layout_constraintTop_toBottomOf="@+id/rbTurkey" />
+
+                <RadioButton
+                    android:id="@+id/rbHolland"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NL - Eredivisie"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbPortugal"
+                    app:layout_constraintStart_toStartOf="@+id/rbGreece"
+                    app:layout_constraintTop_toBottomOf="@+id/rbGreece" />
+
+                <RadioButton
+                    android:id="@+id/rbPortugal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POR - Primeira Liga"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@+id/rbRussia"
+                    app:layout_constraintStart_toStartOf="@+id/rbHolland"
+                    app:layout_constraintTop_toBottomOf="@+id/rbHolland" />
+
+                <RadioButton
+                    android:id="@+id/rbRussia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RUS - Premier League"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/rbPortugal"
+                    app:layout_constraintTop_toBottomOf="@+id/rbPortugal" />
+
+
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </layout>
