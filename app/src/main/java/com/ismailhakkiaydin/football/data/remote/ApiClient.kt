@@ -1,6 +1,8 @@
 package com.ismailhakkiaydin.football.data.remote
 
 import com.ismailhakkiaydin.football.model.country.CountryResponse
+import com.ismailhakkiaydin.football.model.league.LeagueResponse
+import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
 import com.ismailhakkiaydin.football.util.Constant
 import io.reactivex.Single
 import retrofit2.Retrofit
@@ -17,6 +19,7 @@ class ApiClient {
         .build()
         .create(ApiService::class.java)
 
-    fun getAllCountries(): Single<CountryResponse> = api.getAllCountries()
+    fun getAllCountries(): Single<LeagueResponse> = api.getAllCountries()
 
+    fun getLeagueTable(leagueId: Int):Single<LeagueTableResponse> = api.getLeagueTable(leagueId)
 }

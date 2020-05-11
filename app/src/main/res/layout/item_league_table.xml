@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="table"
+            type="com.ismailhakkiaydin.football.model.leaguetable.Standing" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/tvRank"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="1"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRankLose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="L"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRankDraw"
+            app:layout_constraintEnd_toStartOf="@+id/tvRankGoalPos"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvRankDraw"
+            app:layout_constraintTop_toTopOf="@+id/tvRankDraw" />
+
+        <TextView
+            android:id="@+id/tvRankGoalPos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRankLose"
+            app:layout_constraintEnd_toStartOf="@+id/tvRankGoalNeg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvRankLose"
+            app:layout_constraintTop_toTopOf="@+id/tvRankLose" />
+
+        <ImageView
+            android:id="@+id/imgRankTeam"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:background="#80DEEA"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRank"
+            app:layout_constraintStart_toEndOf="@+id/tvRank"
+            app:layout_constraintTop_toTopOf="@+id/tvRank" />
+
+        <TextView
+            android:id="@+id/tvRankTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{table.teamName}"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/imgRankTeam"
+            app:layout_constraintStart_toEndOf="@+id/imgRankTeam"
+            app:layout_constraintTop_toTopOf="@+id/imgRankTeam" />
+
+        <TextView
+            android:id="@+id/tvRankPlayed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRankTeamName"
+            app:layout_constraintEnd_toStartOf="@+id/tvRankWin"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvRankTeamName"
+            app:layout_constraintTop_toTopOf="@+id/tvRankTeamName" />
+
+        <TextView
+            android:id="@+id/tvRankWin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRankPlayed"
+            app:layout_constraintEnd_toStartOf="@+id/tvRankDraw"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvRankPlayed"
+            app:layout_constraintTop_toTopOf="@+id/tvRankPlayed" />
+
+        <TextView
+            android:id="@+id/tvRankDraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRankWin"
+            app:layout_constraintEnd_toStartOf="@+id/tvRankLose"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvRankWin"
+            app:layout_constraintTop_toTopOf="@+id/tvRankWin" />
+
+        <TextView
+            android:id="@+id/tvRankGoalNeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRankGoalPos"
+            app:layout_constraintEnd_toStartOf="@+id/tvRankAverage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvRankGoalPos"
+            app:layout_constraintTop_toTopOf="@+id/tvRankGoalPos" />
+
+        <TextView
+            android:id="@+id/tvRankAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRankGoalNeg"
+            app:layout_constraintEnd_toStartOf="@+id/tvRankPoints"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvRankGoalNeg"
+            app:layout_constraintTop_toTopOf="@+id/tvRankGoalNeg" />
+
+        <TextView
+            android:id="@+id/tvRankPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P"
+            android:textSize="@dimen/standing_item_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRankAverage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvRankAverage"
+            app:layout_constraintTop_toTopOf="@+id/tvRankAverage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/standingsFragment"
-        android:name="com.ismailhakkiaydin.football.ui.standing.StandingsFragment"
+        android:name="com.ismailhakkiaydin.football.ui.home.HomeFragment"
         android:label="fragment_standings"
-        tools:layout="@layout/fragment_standings" />
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/fixtureFragment"
         android:name="com.ismailhakkiaydin.football.ui.fixture.FixtureFragment"
@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_fixture" />
     <fragment
         android:id="@+id/playerFragment"
-        android:name="com.ismailhakkiaydin.football.ui.player.PlayerFragment"
+        android:name="com.ismailhakkiaydin.football.ui.team.PlayerFragment"
         android:label="fragment_player"
         tools:layout="@layout/fragment_player" />
     <fragment
