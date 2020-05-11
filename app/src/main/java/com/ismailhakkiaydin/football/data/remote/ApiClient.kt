@@ -1,7 +1,5 @@
 package com.ismailhakkiaydin.football.data.remote
 
-import com.ismailhakkiaydin.football.model.country.CountryResponse
-import com.ismailhakkiaydin.football.model.league.LeagueResponse
 import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
 import com.ismailhakkiaydin.football.util.Constant
 import io.reactivex.Single
@@ -18,8 +16,6 @@ class ApiClient {
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build()
         .create(ApiService::class.java)
-
-    fun getAllCountries(): Single<LeagueResponse> = api.getAllCountries()
 
     fun getLeagueTable(leagueId: Int):Single<LeagueTableResponse> = api.getLeagueTable(leagueId)
 }

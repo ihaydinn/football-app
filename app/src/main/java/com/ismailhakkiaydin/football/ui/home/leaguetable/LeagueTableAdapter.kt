@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 import com.ismailhakkiaydin.football.R
 import com.ismailhakkiaydin.football.databinding.ItemLeagueTableBinding
 import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
@@ -24,11 +25,15 @@ class LeagueTableAdapter(val leagueTableList: List<List<Standing>>, val onItemCl
         return LeagueTableViewHolder(view)
     }
 
-    override fun getItemCount(): Int = leagueTableList.size
+    override fun getItemCount(): Int = leagueTableList[0].size
 
     override fun onBindViewHolder(holder: LeagueTableViewHolder, position: Int) {
-        holder.view.table = leagueTableList[0][position]
-        holder.bind(leagueTableList[position][position],onItemClick)
+        val gs = Gson()
+        val js = gs.toJson(leagueTableList[0][position])
+        val standing = gs.fromJson(js, Standing::class.java)
+        holder.view.table = standing
+        holder.bind(standing,onItemClick)
     }
+
 
 }
