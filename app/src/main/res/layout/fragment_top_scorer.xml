@@ -16,26 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tvScorersRank"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text=" "
-            android:textSize="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imgRankTeam"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="16dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@+id/tvScorersRank"
-            app:layout_constraintStart_toEndOf="@+id/tvScorersRank"
-            app:layout_constraintTop_toTopOf="@+id/tvScorersRank" />
 
         <TextView
             android:id="@+id/tvScorersPlayerName"
@@ -44,15 +24,15 @@
             android:layout_marginStart="4dp"
             android:text="Player Name"
             android:textSize="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imgRankTeam"
-            app:layout_constraintStart_toEndOf="@+id/imgRankTeam"
-            app:layout_constraintTop_toTopOf="@+id/imgRankTeam" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <ImageView
             android:id="@+id/imgScorersGames"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
             android:src="@drawable/ic_tshirt"
             app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerGoal"
@@ -61,8 +41,8 @@
 
         <ImageView
             android:id="@+id/imgScorersPlayerGoal"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
             android:src="@drawable/ic_ball"
             app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerAssists"
@@ -71,8 +51,8 @@
 
         <TextView
             android:id="@+id/imgScorersPlayerAssists"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
             android:text="A"
             android:textSize="16dp"
@@ -82,8 +62,8 @@
 
         <ImageView
             android:id="@+id/imgScorersPlayerYellowCard"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/ic_red"
             android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerDoubleYellow"
@@ -92,8 +72,8 @@
 
         <ImageView
             android:id="@+id/imgScorersPlayerDoubleYellow"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/ic_double_yellow"
             android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerRedCard"
@@ -102,8 +82,8 @@
 
         <ImageView
             android:id="@+id/imgScorersPlayerRedCard"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/ic_yellow"
             android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="parent"

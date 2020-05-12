@@ -27,33 +27,14 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent" />
 
-      <TextView
-          android:id="@+id/tvRankLose"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="8dp"
-          android:text="L"
-          android:textSize="@dimen/standing_item_text_size"
-          app:layout_constraintBottom_toBottomOf="@+id/tvRankGoalPos"
-          app:layout_constraintEnd_toStartOf="@+id/tvRankGoalPos"
-          app:layout_constraintTop_toTopOf="@+id/tvRankGoalPos" />
 
-      <TextView
-          android:id="@+id/tvRankGoalPos"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="8dp"
-          android:text="A"
-          android:textSize="@dimen/standing_item_text_size"
-          app:layout_constraintBottom_toBottomOf="@+id/tvRankGoalNeg"
-          app:layout_constraintEnd_toStartOf="@+id/tvRankGoalNeg"
-          app:layout_constraintTop_toTopOf="@+id/tvRankGoalNeg" />
+
 
       <ImageView
           android:id="@+id/imgRankTeam"
-          android:layout_width="24dp"
-          android:layout_height="24dp"
-          android:layout_marginStart="16dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_marginLeft="8dp"
           android:background="@android:color/transparent"
           app:layout_constraintBottom_toBottomOf="@+id/tvRank"
           app:layout_constraintStart_toEndOf="@+id/tvRank"
@@ -72,10 +53,10 @@
 
       <TextView
           android:id="@+id/tvRankPlayed"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="8dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           android:text="P"
+          android:layout_marginRight="8dp"
           android:textSize="@dimen/standing_item_text_size"
           app:layout_constraintBottom_toBottomOf="@+id/tvRankWin"
           app:layout_constraintEnd_toStartOf="@+id/tvRankWin"
@@ -84,10 +65,10 @@
 
       <TextView
           android:id="@+id/tvRankWin"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="8dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           android:text="W"
+          android:layout_marginRight="8dp"
           android:textSize="@dimen/standing_item_text_size"
           app:layout_constraintBottom_toBottomOf="@+id/tvRankDraw"
           app:layout_constraintEnd_toStartOf="@+id/tvRankDraw"
@@ -95,32 +76,34 @@
 
       <TextView
           android:id="@+id/tvRankDraw"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="8dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           android:text="D"
+          android:layout_marginRight="8dp"
           android:textSize="@dimen/standing_item_text_size"
           app:layout_constraintBottom_toBottomOf="@+id/tvRankLose"
           app:layout_constraintEnd_toStartOf="@+id/tvRankLose"
           app:layout_constraintTop_toTopOf="@+id/tvRankLose" />
 
+
       <TextView
-          android:id="@+id/tvRankGoalNeg"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="8dp"
-          android:text="Y"
+          android:id="@+id/tvRankLose"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:text="L"
+          android:layout_marginRight="8dp"
           android:textSize="@dimen/standing_item_text_size"
           app:layout_constraintBottom_toBottomOf="@+id/tvRankAverage"
           app:layout_constraintEnd_toStartOf="@+id/tvRankAverage"
           app:layout_constraintTop_toTopOf="@+id/tvRankAverage" />
 
+
       <TextView
           android:id="@+id/tvRankAverage"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="8dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           android:text="A"
+          android:layout_marginRight="8dp"
           android:textSize="@dimen/standing_item_text_size"
           app:layout_constraintBottom_toBottomOf="@+id/tvRankPoints"
           app:layout_constraintEnd_toStartOf="@+id/tvRankPoints"
@@ -128,9 +111,8 @@
 
       <TextView
           android:id="@+id/tvRankPoints"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="8dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           android:text="P"
           android:textSize="@dimen/standing_item_text_size"
           app:layout_constraintBottom_toBottomOf="parent"
@@ -139,10 +121,10 @@
 
       <androidx.constraintlayout.widget.Barrier
           android:id="@+id/barrier2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           app:barrierDirection="left"
-          app:constraint_referenced_ids="tvRankPoints,tvRankWin,tvRankPlayed,tvRankDraw,tvRankGoalNeg,tvRankAverage,tvRankGoalPos,tvRankLose"
+          app:constraint_referenced_ids="tvRankPoints,tvRankWin,tvRankPlayed,tvRankDraw,tvRankAverage,tvRankLose"
           tools:layout_editor_absoluteX="410dp"
           tools:layout_editor_absoluteY="2dp" />
 

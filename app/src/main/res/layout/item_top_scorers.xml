@@ -15,94 +15,74 @@
         android:layout_height="wrap_content"
         android:padding="2dp">
 
-        <TextView
-            android:id="@+id/tvScorersRank"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textSize="14sp"
-            android:gravity="right"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imgRankTeam"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="16dp"
-            android:background="#80DEEA"
-            app:layout_constraintBottom_toBottomOf="@+id/tvScorersRank"
-            app:layout_constraintStart_toEndOf="@+id/tvScorersRank"
-            app:layout_constraintTop_toTopOf="@+id/tvScorersRank" />
 
         <TextView
             android:id="@+id/tvScorersPlayerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player Name"
+            android:text="@{scorers.playerName}"
             android:layout_marginStart="4dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imgRankTeam"
-            app:layout_constraintStart_toEndOf="@+id/imgRankTeam"
-            app:layout_constraintTop_toTopOf="@+id/imgRankTeam" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
             android:id="@+id/tvScorersGames"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
-            android:text="1"
+            android:text="@{String.valueOf(scorers.games.appearences)}"
             app:layout_constraintBottom_toBottomOf="@+id/tvScorersPlayerGoal"
             app:layout_constraintEnd_toStartOf="@+id/tvScorersPlayerGoal"
             app:layout_constraintTop_toTopOf="@+id/tvScorersPlayerGoal" />
 
         <TextView
             android:id="@+id/tvScorersPlayerGoal"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
-            android:text="1"
+            android:text="@{String.valueOf(scorers.goals.total)}"
             app:layout_constraintBottom_toBottomOf="@+id/tvScorersPlayerAssists"
             app:layout_constraintEnd_toStartOf="@+id/tvScorersPlayerAssists"
             app:layout_constraintTop_toTopOf="@+id/tvScorersPlayerAssists" />
 
         <TextView
             android:id="@+id/tvScorersPlayerAssists"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginEnd="8dp"
-            android:text="1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@{String.valueOf(scorers.goals.assists)}"
             app:layout_constraintBottom_toBottomOf="@+id/tvScorersPlayerYellowCard"
             app:layout_constraintEnd_toStartOf="@+id/tvScorersPlayerYellowCard"
             app:layout_constraintTop_toTopOf="@+id/tvScorersPlayerYellowCard" />
 
         <TextView
             android:id="@+id/tvScorersPlayerYellowCard"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
-            android:text="1"
+            android:text="@{String.valueOf(scorers.cards.red)}"
             app:layout_constraintBottom_toBottomOf="@+id/tvScorersPlayerDoubleYellow"
             app:layout_constraintEnd_toStartOf="@+id/tvScorersPlayerDoubleYellow"
             app:layout_constraintTop_toTopOf="@+id/tvScorersPlayerDoubleYellow" />
 
         <TextView
             android:id="@+id/tvScorersPlayerDoubleYellow"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
-            android:text="1"
+            android:text="@{String.valueOf(scorers.cards.secondYellow)}"
             app:layout_constraintBottom_toBottomOf="@+id/tvScorersPlayerRedCard"
             app:layout_constraintEnd_toStartOf="@+id/tvScorersPlayerRedCard"
             app:layout_constraintTop_toTopOf="@+id/tvScorersPlayerRedCard" />
 
         <TextView
             android:id="@+id/tvScorersPlayerRedCard"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-
-            android:text="1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="@{String.valueOf(scorers.cards.yellow)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
