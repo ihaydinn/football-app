@@ -1,6 +1,7 @@
 package com.ismailhakkiaydin.football.data.remote
 
 import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
+import com.ismailhakkiaydin.football.model.topscorer.TopScorerResponse
 import com.ismailhakkiaydin.football.util.Constant
 import io.reactivex.Single
 import retrofit2.Retrofit
@@ -18,4 +19,5 @@ class ApiClient {
         .create(ApiService::class.java)
 
     fun getLeagueTable(leagueId: Int):Single<LeagueTableResponse> = api.getLeagueTable(leagueId)
+    fun getTopScorers(leagueId: Int):Single<TopScorerResponse> = api.getTopScorers(leagueId)
 }

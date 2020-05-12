@@ -17,8 +17,6 @@ import kotlinx.android.synthetic.main.fragment_league_table.*
 
 class LeagueTableFragment : BaseVMFragment<LeagueTableViewModel>() {
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.topscorer.TopScorerFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvScorersRank"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=" "
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgRankTeam"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/tvScorersRank"
+            app:layout_constraintStart_toEndOf="@+id/tvScorersRank"
+            app:layout_constraintTop_toTopOf="@+id/tvScorersRank" />
+
+        <TextView
+            android:id="@+id/tvScorersPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Player Name"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgRankTeam"
+            app:layout_constraintStart_toEndOf="@+id/imgRankTeam"
+            app:layout_constraintTop_toTopOf="@+id/imgRankTeam" />
+
+
+        <ImageView
+            android:id="@+id/imgScorersGames"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_tshirt"
+            app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerGoal"
+            app:layout_constraintEnd_toStartOf="@+id/imgScorersPlayerGoal"
+            app:layout_constraintTop_toTopOf="@+id/imgScorersPlayerGoal" />
+
+        <ImageView
+            android:id="@+id/imgScorersPlayerGoal"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_ball"
+            app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerAssists"
+            app:layout_constraintEnd_toStartOf="@+id/imgScorersPlayerAssists"
+            app:layout_constraintTop_toTopOf="@+id/imgScorersPlayerAssists" />
+
+        <TextView
+            android:id="@+id/imgScorersPlayerAssists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="A"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerYellowCard"
+            app:layout_constraintEnd_toStartOf="@+id/imgScorersPlayerYellowCard"
+            app:layout_constraintTop_toTopOf="@+id/imgScorersPlayerYellowCard" />
+
+        <ImageView
+            android:id="@+id/imgScorersPlayerYellowCard"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_red"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerDoubleYellow"
+            app:layout_constraintEnd_toStartOf="@+id/imgScorersPlayerDoubleYellow"
+            app:layout_constraintTop_toTopOf="@+id/imgScorersPlayerDoubleYellow" />
+
+        <ImageView
+            android:id="@+id/imgScorersPlayerDoubleYellow"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_double_yellow"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgScorersPlayerRedCard"
+            app:layout_constraintEnd_toStartOf="@+id/imgScorersPlayerRedCard"
+            app:layout_constraintTop_toTopOf="@+id/imgScorersPlayerRedCard" />
+
+        <ImageView
+            android:id="@+id/imgScorersPlayerRedCard"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_yellow"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTopScorers"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:listitem="@layout/item_top_scorers" />
+</androidx.constraintlayout.widget.ConstraintLayout>

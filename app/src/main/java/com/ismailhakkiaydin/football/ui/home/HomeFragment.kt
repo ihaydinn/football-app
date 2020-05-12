@@ -9,6 +9,7 @@ import android.widget.Toast
 
 import com.ismailhakkiaydin.football.R
 import com.ismailhakkiaydin.football.ui.home.leaguetable.LeagueTableFragment
+import com.ismailhakkiaydin.football.ui.home.topscorer.TopScorerFragment
 import com.ismailhakkiaydin.football.util.CustomSharedPreferences
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -42,11 +43,11 @@ class HomeFragment : Fragment() {
     private fun setupViewpager() {
         val adapter = fragmentManager?.let { ViewPagerAdapter(it) }
         adapter?.apply {
-            addFragment(LeagueTableFragment(), "Puan Durumu")
-            addFragment(LeagueTableFragment(), "Puan Durumu")
+            addFragment(LeagueTableFragment(), "League Table")
+            addFragment(TopScorerFragment(), "Top Scorers")
         }
         viewPager.adapter = adapter
-        viewPager.offscreenPageLimit = 2
+//        viewPager.offscreenPageLimit = 2
     }
 
 }
