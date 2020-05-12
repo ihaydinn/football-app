@@ -12,7 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:padding="2dp">
 
 
@@ -87,6 +87,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E3E3E3"
+            app:layout_constraintBottom_toBottomOf="@+id/tvScorersPlayerRedCard"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

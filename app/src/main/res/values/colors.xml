@@ -5,4 +5,12 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorBottomNavBar">#FFCC80</color>
     <color name="colorCheckedBottomNavBar">#FB8C00</color>
+
+    <color name="colorChampionsLeagueGroup">#689F38</color>
+    <color name="colorChampionsLeagueQualification">#A8DF78</color>
+    <color name="colorEuropaLeagueGroup">#1976D2</color>
+    <color name="colorEuropaLeagueQualification">#70C9FA</color>
+    <color name="colorRelegation">#D32F2F</color>
+    <color name="colorEredivisie">#F1A03B</color>
+
 </resources>

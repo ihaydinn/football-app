@@ -19,7 +19,7 @@ data class Standing(
     @SerializedName("status")
     var status: String,
     @SerializedName("description")
-    var description: String,
+    var description: String? = null,
     @SerializedName("all")
     var all: All,
     @SerializedName("home")

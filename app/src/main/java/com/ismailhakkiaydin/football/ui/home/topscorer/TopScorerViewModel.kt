@@ -16,8 +16,10 @@ class TopScorerViewModel : ViewModel() {
     private val disposable = CompositeDisposable()
 
     val topScorerList = MutableLiveData<List<Topscorer>>()
+    val loadingTopScorer = MutableLiveData<Boolean>()
 
     fun getTopScorers(leagueId: Int){
+        loadingTopScorer.value = true
         disposable.add(
             apiClient.getTopScorers(leagueId)
                 .subscribeOn(Schedulers.newThread())
@@ -25,6 +27,7 @@ class TopScorerViewModel : ViewModel() {
                 .subscribeWith(object : DisposableSingleObserver<TopScorerResponse>(){
                     override fun onSuccess(t: TopScorerResponse) {
                         topScorerList.value = t.api.topscorers
+                        loadingTopScorer.value = false
                     }
 
                     override fun onError(e: Throwable) {

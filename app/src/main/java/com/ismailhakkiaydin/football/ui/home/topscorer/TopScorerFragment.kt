@@ -39,6 +39,18 @@ class TopScorerFragment : BaseVMFragment<TopScorerViewModel>() {
             }
         })
 
+        viewModel.loadingTopScorer.observe(viewLifecycleOwner, Observer {
+            it.let {
+                if (it){
+                    rvTopScorers.visibility = View.GONE
+                    progressBarTopScorer.visibility = View.VISIBLE
+                }else{
+                    progressBarTopScorer.visibility = View.GONE
+                    rvTopScorers.visibility = View.VISIBLE
+                }
+            }
+        })
+
     }
 
     override fun getViewModel(): Class<TopScorerViewModel> = TopScorerViewModel::class.java

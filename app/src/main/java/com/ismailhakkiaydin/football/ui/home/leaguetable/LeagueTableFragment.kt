@@ -40,6 +40,18 @@ class LeagueTableFragment : BaseVMFragment<LeagueTableViewModel>() {
                 }
             }
         })
+
+        viewModel.loadingLeagueTable.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                if (it){
+                    progressBarLeagueTable.visibility = View.VISIBLE
+                    rvLeagueTable.visibility = View.GONE
+                }else{
+                    progressBarLeagueTable.visibility = View.GONE
+                    rvLeagueTable.visibility = View.VISIBLE
+                }
+            }
+        })
     }
 
     override fun getViewModel(): Class<LeagueTableViewModel> = LeagueTableViewModel::class.java

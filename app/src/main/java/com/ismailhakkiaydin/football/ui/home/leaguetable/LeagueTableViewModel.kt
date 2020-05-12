@@ -17,8 +17,10 @@ class LeagueTableViewModel: ViewModel() {
     private val disposable = CompositeDisposable()
 
     val leagueTable = MutableLiveData<List<List<Standing>>>()
+    val loadingLeagueTable = MutableLiveData<Boolean>()
 
     fun getLeagueTable(leagueId: Int){
+        loadingLeagueTable.value = true
         disposable.add(
             apiClient.getLeagueTable(leagueId)
                 .subscribeOn(Schedulers.newThread())
@@ -26,6 +28,7 @@ class LeagueTableViewModel: ViewModel() {
                 .subscribeWith(object : DisposableSingleObserver<LeagueTableResponse>(){
                     override fun onSuccess(t: LeagueTableResponse) {
                         leagueTable.value = t.api.standings
+                        loadingLeagueTable.value = false
                         Log.i("calıstı", " calıstı")
                     }
 
