@@ -16,10 +16,10 @@
         android:label="fragment_fixture"
         tools:layout="@layout/fragment_fixture" />
     <fragment
-        android:id="@+id/playerFragment"
-        android:name="com.ismailhakkiaydin.football.ui.team.PlayerFragment"
-        android:label="fragment_player"
-        tools:layout="@layout/fragment_player" />
+        android:id="@+id/teamFragment"
+        android:name="com.ismailhakkiaydin.football.ui.team.TeamFragment"
+        android:label="fragment_team"
+        tools:layout="@layout/fragment_team" />
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.ismailhakkiaydin.football.ui.setting.SettingFragment"

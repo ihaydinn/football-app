@@ -7,8 +7,8 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_settings"/>
 
-    <item android:id="@+id/playerFragment"
-        android:title="@string/players"
+    <item android:id="@+id/teamFragment"
+        android:title="@string/teams"
         app:showAsAction="always"
         android:icon="@drawable/ic_players"/>
 

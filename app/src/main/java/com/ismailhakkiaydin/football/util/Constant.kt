@@ -5,4 +5,5 @@ object Constant {
     const val API_KEY = ""
     const val GET_LEAGUE_TABLE = "leagueTable/{league_id}"
     const val GET_TOP_SCORERS = "topscorers/{league_id}"
+    const val GET_ALL_TEAMS_OF_LEAGUE = "teams/league/{league_id}"
 }
