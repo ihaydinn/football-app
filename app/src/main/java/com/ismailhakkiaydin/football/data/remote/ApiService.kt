@@ -1,5 +1,6 @@
 package com.ismailhakkiaydin.football.data.remote
 
+import com.ismailhakkiaydin.football.model.fixture.FixtureResponse
 import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
 import com.ismailhakkiaydin.football.model.player.PlayerResponse
 import com.ismailhakkiaydin.football.model.team.TeamResponse
@@ -32,5 +33,9 @@ interface ApiService {
     @Headers(Constant.API_KEY)
     @GET(Constant.GET_ALL_TRANSFERS_OF_TEAM)
     fun getAllTransfersOfTeam(@Path("team_id") teamId: Int): Single<TransferResponse>
+
+    @Headers(Constant.API_KEY)
+    @GET(Constant.GET_ALl_FIXTURE_OF_LEAGUE)
+    fun getAllFixtureOfLeague(@Path("league_id") leagueId: Int): Single<FixtureResponse>
 
 }

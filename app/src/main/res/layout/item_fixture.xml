@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fixture"
+            type="com.ismailhakkiaydin.football.model.fixture.Fixture" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:id="@+id/imgFixtuteLeague"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:imageUrl="@{fixture.league.logo}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvFixtureLeague"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@{fixture.league.name}"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvFixtureCountryName"
+                app:layout_constraintStart_toEndOf="@+id/tvFixtureCountryName"
+                app:layout_constraintTop_toTopOf="@+id/tvFixtureCountryName" />
+
+            <TextView
+                android:id="@+id/tvFixtureCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@{fixture.league.country}"
+                android:textSize="8sp"
+                app:layout_constraintStart_toEndOf="@+id/imgFixtuteLeague"
+                app:layout_constraintTop_toTopOf="@+id/imgFixtuteLeague" />
+
+            <TextView
+                android:id="@+id/tvFixtureWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{fixture.round}"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="@+id/tvFixtureCountryName"
+                app:layout_constraintTop_toBottomOf="@+id/tvFixtureCountryName" />
+
+            <TextView
+                android:id="@+id/tvFixtureDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:dayConverter="@{fixture.eventTimestamp}"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFixtureReferee"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/imgFixtureAwayTeam"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:imageUrl="@{fixture.awayTeam.logo}"
+                app:layout_constraintBottom_toBottomOf="@+id/tvFixtureAwayScore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.513"
+                app:layout_constraintStart_toEndOf="@+id/tvFixtureAwayScore"
+                app:layout_constraintTop_toTopOf="@+id/tvFixtureAwayScore"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imgFixtureHomeTeam"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:imageUrl="@{fixture.homeTeam.logo}"
+                app:layout_constraintBottom_toBottomOf="@+id/tvFixtureHomeScore"
+                app:layout_constraintEnd_toStartOf="@+id/tvFixtureHomeScore"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvFixtureHomeScore"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="100dp"
+                android:text="-"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvFixtureVenue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgFixtuteLeague"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <TextView
+                android:id="@+id/tvFixtureAwayScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{String.valueOf(fixture.goalsAwayTeam)}"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tvFixtureHomeScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@{String.valueOf(fixture.goalsHomeTeam)}"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintEnd_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/tvFixtureVenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{fixture.venue}"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFixtureHomeTeamName" />
+
+            <TextView
+                android:id="@+id/tvFixtureReferee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{fixture.referee}"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFixtureVenue" />
+
+            <TextView
+                android:id="@+id/tvFixtureHomeTeamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{fixture.homeTeam.teamName}"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/imgFixtureHomeTeam"
+                app:layout_constraintStart_toStartOf="@+id/imgFixtureHomeTeam"
+                app:layout_constraintTop_toBottomOf="@+id/imgFixtureHomeTeam" />
+
+            <TextView
+                android:id="@+id/tvFixtureAwayTeamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{fixture.awayTeam.teamName}"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/imgFixtureAwayTeam"
+                app:layout_constraintStart_toStartOf="@+id/imgFixtureAwayTeam"
+                app:layout_constraintTop_toBottomOf="@+id/imgFixtureAwayTeam" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>
+
