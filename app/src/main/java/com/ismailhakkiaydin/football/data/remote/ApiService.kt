@@ -1,6 +1,7 @@
 package com.ismailhakkiaydin.football.data.remote
 
 import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
+import com.ismailhakkiaydin.football.model.player.PlayerResponse
 import com.ismailhakkiaydin.football.model.team.TeamResponse
 import com.ismailhakkiaydin.football.model.topscorer.TopScorerResponse
 import com.ismailhakkiaydin.football.util.Constant
@@ -22,5 +23,9 @@ interface ApiService {
     @Headers(Constant.API_KEY)
     @GET(Constant.GET_ALL_TEAMS_OF_LEAGUE)
     fun getAllTeamsOfLeague(@Path("league_id") leagueId: Int): Single<TeamResponse>
+
+    @Headers(Constant.API_KEY)
+    @GET(Constant.GET_ALL_PLAYERS_OF_TEAM)
+    fun getAllPlayersOfTeam(@Path("team_id") teamId: Int): Single<PlayerResponse>
 
 }

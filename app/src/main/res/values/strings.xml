@@ -8,6 +8,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="player_nationalatity">Nationalatity</string>
+    <string name="player_birth_country">Birth Country</string>
+    <string name="player_birth_place">Birth Place</string>
+    <string name="player_position">Position</string>
+    <string name="player_age">Age</string>
+    <string name="player_weight">Weight</string>
+    <string name="player_height">Height</string>
+    <string name="player_name">Cristiano Ronaldo</string>
 
 
 </resources>

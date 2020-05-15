@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/standingsFragment">
+    app:startDestination="@id/teamFragment">
 
     <fragment
         android:id="@+id/standingsFragment"
@@ -19,10 +19,23 @@
         android:id="@+id/teamFragment"
         android:name="com.ismailhakkiaydin.football.ui.team.TeamFragment"
         android:label="fragment_team"
-        tools:layout="@layout/fragment_team" />
+        tools:layout="@layout/fragment_team" >
+        <action
+            android:id="@+id/action_teamFragment_to_teamDetailFragment"
+            app:destination="@id/teamDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.ismailhakkiaydin.football.ui.setting.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/teamDetailFragment"
+        android:name="com.ismailhakkiaydin.football.ui.team.team_detail.TeamDetailFragment"
+        android:label="fragment_team_detail"
+        tools:layout="@layout/fragment_team_detail" >
+        <argument
+            android:name="teamId"
+            app:argType="integer" />
+    </fragment>
 </navigation>
