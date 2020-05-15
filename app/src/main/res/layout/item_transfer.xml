@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="transfer"
+            type="com.ismailhakkiaydin.football.model.transfer.Transfer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/tvTransferName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{transfer.playerName}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transfer Date "
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvTransferName"
+            app:layout_constraintTop_toBottomOf="@+id/tvTransferName" />
+
+        <TextView
+            android:id="@+id/tvTransferDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{transfer.transferDate}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/tvTransferPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{transfer.type}"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/tvTransferDate"
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/tvTransferTeamIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{transfer.teamİn.teamName}"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+        <TextView
+            android:id="@+id/tvTransferTeamOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{transfer.teamOut.teamName}"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvTransferTeamIn"
+            app:layout_constraintTop_toBottomOf="@+id/tvTransferTeamIn" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_team_in"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTransferTeamIn"
+            app:layout_constraintStart_toEndOf="@+id/tvTransferTeamIn"
+            app:layout_constraintTop_toTopOf="@+id/tvTransferTeamIn" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_team_out"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTransferTeamOut"
+            app:layout_constraintStart_toEndOf="@+id/tvTransferTeamOut"
+            app:layout_constraintTop_toTopOf="@+id/tvTransferTeamOut" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D5D5D5"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

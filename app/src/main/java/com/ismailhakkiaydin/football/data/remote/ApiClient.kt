@@ -4,6 +4,7 @@ import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
 import com.ismailhakkiaydin.football.model.player.PlayerResponse
 import com.ismailhakkiaydin.football.model.team.TeamResponse
 import com.ismailhakkiaydin.football.model.topscorer.TopScorerResponse
+import com.ismailhakkiaydin.football.model.transfer.TransferResponse
 import com.ismailhakkiaydin.football.util.Constant
 import io.reactivex.Single
 import retrofit2.Retrofit
@@ -24,4 +25,5 @@ class ApiClient {
     fun getTopScorers(leagueId: Int):Single<TopScorerResponse> = api.getTopScorers(leagueId)
     fun getAllTeamsOfLeague(leagueId: Int):Single<TeamResponse> = api.getAllTeamsOfLeague(leagueId)
     fun getAllPlayersOfTeam(teamId: Int):Single<PlayerResponse> = api.getAllPlayersOfTeam(teamId)
+    fun getAllTransfersOfTeam(teamId: Int):Single<TransferResponse> = api.getAllTransfersOfTeam(teamId)
 }

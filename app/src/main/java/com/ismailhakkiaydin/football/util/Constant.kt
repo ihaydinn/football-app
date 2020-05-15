@@ -7,6 +7,7 @@ object Constant {
     const val GET_TOP_SCORERS = "topscorers/{league_id}"
     const val GET_ALL_TEAMS_OF_LEAGUE = "teams/league/{league_id}"
     const val GET_ALL_PLAYERS_OF_TEAM = "players/squad/{team_id}/2019"
+    const val GET_ALL_TRANSFERS_OF_TEAM = "transfers/team/{team_id}"
 
     const val TEAM_ID = "team_id"
 }
