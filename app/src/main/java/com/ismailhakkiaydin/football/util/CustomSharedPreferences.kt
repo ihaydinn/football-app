@@ -9,6 +9,7 @@ class CustomSharedPreferences {
 
     companion object{
         private val COUNTRY_ID = "country_id"
+        private val PREFERENCES_TIME = "preferences_time"
         private val RB_ID = "rb_id"
         private var sharedPreferences: SharedPreferences? = null
 
@@ -43,6 +44,14 @@ class CustomSharedPreferences {
     }
 
     fun getRbCountry() = sharedPreferences?.getInt(RB_ID, 0)
+
+    fun saveTime(time: Long) {
+        sharedPreferences?.edit(commit = true){
+            putLong(PREFERENCES_TIME,time)
+        }
+    }
+
+    fun getTime() = sharedPreferences?.getLong(PREFERENCES_TIME,0)
 
 
 }
