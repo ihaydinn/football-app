@@ -41,5 +41,4 @@ class TeamViewModel : ViewModel() {
         super.onCleared()
         disposable.clear()
     }
-
 }

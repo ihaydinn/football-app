@@ -32,7 +32,14 @@ class TopScorerViewModel(application: Application) : BaseViewModel(application) 
 
         val updateTime = customPreferences.getTime()
         if (updateTime != null && updateTime != 0L && System.nanoTime() - updateTime < refreshTime) {
-            getDataFromSQLite()
+            var temp = arrayListOf(0)
+            temp.add(542)
+            temp.add(leagueId)
+            if (temp[(temp.lastIndex)-1]==leagueId){
+                getDataFromSQLite()
+            }else{
+                getTopScorersFromApi(leagueId)
+            }
         } else {
             getTopScorersFromApi(leagueId)
         }

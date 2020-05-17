@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Player(
     @SerializedName("player_id")
-    var playerİd: Int,
+    var playerId: Int,
     @SerializedName("player_name")
     var playerName: String,
     @SerializedName("firstname")
