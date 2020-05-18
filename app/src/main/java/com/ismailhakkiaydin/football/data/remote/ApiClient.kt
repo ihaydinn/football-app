@@ -1,6 +1,7 @@
 package com.ismailhakkiaydin.football.data.remote
 
 import com.ismailhakkiaydin.football.model.fixture.FixtureResponse
+import com.ismailhakkiaydin.football.model.h2h.H2HResponse
 import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
 import com.ismailhakkiaydin.football.model.player.PlayerResponse
 import com.ismailhakkiaydin.football.model.team.TeamResponse
@@ -28,4 +29,5 @@ class ApiClient {
     fun getAllPlayersOfTeam(teamId: Int):Single<PlayerResponse> = api.getAllPlayersOfTeam(teamId)
     fun getAllTransfersOfTeam(teamId: Int):Single<TransferResponse> = api.getAllTransfersOfTeam(teamId)
     fun getAllFixtureOfLeague(leagueId: Int):Single<FixtureResponse> = api.getAllFixtureOfLeague(leagueId)
+    fun getAllH2hItems(homeTeamId: Int, awayTeamId:Int):Single<H2HResponse> = api.getAllH2hItems(homeTeamId, awayTeamId)
 }

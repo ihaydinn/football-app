@@ -6,11 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.ismailhakkiaydin.football.R
 import com.ismailhakkiaydin.football.base.BaseVMFragment
+import com.ismailhakkiaydin.football.util.Constant
 import com.ismailhakkiaydin.football.util.CustomSharedPreferences
 import kotlinx.android.synthetic.main.fragment_fixture.*
 import kotlinx.android.synthetic.main.fragment_team.*
@@ -35,7 +38,8 @@ class FixtureFragment : BaseVMFragment<FixtureViewModel>() {
             it?.let {
                 rvFixture.layoutManager = LinearLayoutManager(context)
                 rvFixture.adapter = FixtureAdapter(it){
-                    Toast.makeText(requireContext(), "Tıklandı, Fixture", Toast.LENGTH_SHORT).show()
+                    val bundle = bundleOf(Constant.FIXTURE_TEAM_IDS to it)
+                    Navigation.findNavController(view).navigate(R.id.action_fixtureFragment_to_fixtureDetailFragment, bundle)
                 }
             }
         })

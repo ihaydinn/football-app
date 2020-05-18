@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="h2h"
+            type="com.ismailhakkiaydin.football.model.h2h.Fixture" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvh2hDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#F1F1F1"
+            android:textSize="14sp"
+            android:dayConverter="@{h2h.eventTimestamp}"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:id="@+id/imgH2hHome"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:imageUrl="@{h2h.homeTeam.logo}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgH2hAway"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="8dp"
+                android:imageUrl="@{h2h.awayTeam.logo}"
+                app:layout_constraintEnd_toEndOf="@+id/imgH2hHome"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imgH2hHome"
+                app:layout_constraintTop_toBottomOf="@+id/imgH2hHome" />
+
+            <TextView
+                android:id="@+id/tvH2hNameHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{h2h.homeTeam.teamName}"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgH2hHome"
+                app:layout_constraintStart_toEndOf="@+id/imgH2hHome"
+                app:layout_constraintTop_toTopOf="@+id/imgH2hHome" />
+
+            <TextView
+                android:id="@+id/tvH2hNameAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{h2h.awayTeam.teamName}"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgH2hAway"
+                app:layout_constraintStart_toEndOf="@+id/imgH2hAway"
+                app:layout_constraintTop_toTopOf="@+id/imgH2hAway" />
+
+            <TextView
+                android:id="@+id/tvH2hScoreHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@{String.valueOf(h2h.goalsHomeTeam)}"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvH2hNameHome"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvH2hNameHome" />
+
+            <TextView
+                android:id="@+id/tvH2hScoreAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@{String.valueOf(h2h.goalsAwayTeam)}"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvH2hNameAway"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvH2hNameAway" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+</layout>

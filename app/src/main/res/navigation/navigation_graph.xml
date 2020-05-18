@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/standingsFragment">
+    app:startDestination="@id/fixtureFragment">
 
     <fragment
         android:id="@+id/standingsFragment"
@@ -14,7 +14,11 @@
         android:id="@+id/fixtureFragment"
         android:name="com.ismailhakkiaydin.football.ui.fixture.FixtureFragment"
         android:label="fragment_fixture"
-        tools:layout="@layout/fragment_fixture" />
+        tools:layout="@layout/fragment_fixture" >
+        <action
+            android:id="@+id/action_fixtureFragment_to_fixtureDetailFragment"
+            app:destination="@id/fixtureDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/teamFragment"
         android:name="com.ismailhakkiaydin.football.ui.team.TeamFragment"
@@ -37,5 +41,11 @@
         <argument
             android:name="teamId"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixtureDetailFragment"
+        android:name="com.ismailhakkiaydin.football.ui.fixture.detail.FixtureDetailFragment"
+        android:label="FixtureDetailFragment" >
+
     </fragment>
 </navigation>
