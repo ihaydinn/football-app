@@ -1,5 +1,6 @@
 package com.ismailhakkiaydin.football.util
 
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.ismailhakkiaydin.football.R

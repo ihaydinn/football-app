@@ -4,6 +4,7 @@ import com.ismailhakkiaydin.football.model.fixture.FixtureResponse
 import com.ismailhakkiaydin.football.model.h2h.H2HResponse
 import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
 import com.ismailhakkiaydin.football.model.player.PlayerResponse
+import com.ismailhakkiaydin.football.model.statistic.StatisticsResponse
 import com.ismailhakkiaydin.football.model.team.TeamResponse
 import com.ismailhakkiaydin.football.model.topscorer.TopScorerResponse
 import com.ismailhakkiaydin.football.model.transfer.TransferResponse
@@ -30,4 +31,5 @@ class ApiClient {
     fun getAllTransfersOfTeam(teamId: Int):Single<TransferResponse> = api.getAllTransfersOfTeam(teamId)
     fun getAllFixtureOfLeague(leagueId: Int):Single<FixtureResponse> = api.getAllFixtureOfLeague(leagueId)
     fun getAllH2hItems(homeTeamId: Int, awayTeamId:Int):Single<H2HResponse> = api.getAllH2hItems(homeTeamId, awayTeamId)
+    fun getFixtureStatistics(fixtureId:Int):Single<StatisticsResponse> = api.getFixtureStatistics(fixtureId)
 }

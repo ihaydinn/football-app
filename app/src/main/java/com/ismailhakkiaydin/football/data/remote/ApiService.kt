@@ -4,6 +4,7 @@ import com.ismailhakkiaydin.football.model.fixture.FixtureResponse
 import com.ismailhakkiaydin.football.model.h2h.H2HResponse
 import com.ismailhakkiaydin.football.model.leaguetable.LeagueTableResponse
 import com.ismailhakkiaydin.football.model.player.PlayerResponse
+import com.ismailhakkiaydin.football.model.statistic.StatisticsResponse
 import com.ismailhakkiaydin.football.model.team.TeamResponse
 import com.ismailhakkiaydin.football.model.topscorer.TopScorerResponse
 import com.ismailhakkiaydin.football.model.transfer.TransferResponse
@@ -42,5 +43,9 @@ interface ApiService {
     @Headers(Constant.API_KEY)
     @GET(Constant.GET_ALL_H2H_ITEMS)
     fun getAllH2hItems(@Path("home_team_id") homeTeamId: Int, @Path("away_team_id") awayTeamId: Int): Single<H2HResponse>
+
+    @Headers(Constant.API_KEY)
+    @GET(Constant.GET_FIXTURE_STATISTICS)
+    fun getFixtureStatistics(@Path("fixture_id") fixtureId: Int): Single<StatisticsResponse>
 
 }

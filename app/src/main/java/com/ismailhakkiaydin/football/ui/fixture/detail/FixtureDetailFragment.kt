@@ -11,6 +11,7 @@ import com.ismailhakkiaydin.football.R
 import com.ismailhakkiaydin.football.model.fixture.Fixture
 import com.ismailhakkiaydin.football.model.fixture.HomeTeam
 import com.ismailhakkiaydin.football.ui.fixture.detail.h2h.H2HFragment
+import com.ismailhakkiaydin.football.ui.fixture.detail.statistic.StatisticFragment
 import com.ismailhakkiaydin.football.util.Constant
 import kotlinx.android.synthetic.main.fragment_fixture_detail.*
 
@@ -34,9 +35,12 @@ class FixtureDetailFragment : Fragment() {
         val adapter = fragmentManager?.let { BasePagerAdapter(it) }
         bundle.putParcelable(Constant.FIXTURE_TEAM_IDS, result)
         var h2hFragment = H2HFragment()
+        var statisticFragment = StatisticFragment()
         h2hFragment.arguments = bundle
+        statisticFragment.arguments = bundle
         adapter?.apply {
             addFragment(h2hFragment, "H2H")
+            addFragment(statisticFragment, "STATS")
         }
 
         viewPagerFixture.adapter = adapter
