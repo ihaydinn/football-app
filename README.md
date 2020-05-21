@@ -1,6 +1,6 @@
 [![Build Status](https://img.shields.io/badge/platform-Android-green)](https://www.android.com/) [![API](https://img.shields.io/badge/API-+23-brightgreen)](https://android-arsenal.com/api?level=23) [![API](https://img.shields.io/badge/license-MIT-blue)]()
 
-<img src="" align="center">
+<img src="https://github.com/ihaydinn/football-app/blob/master/images/ic_launcher.png">
 
 # Content
 - [About Projects](https://github.com/ihaydinn/football-app#about-projects)
@@ -31,7 +31,7 @@ If you want to use this project, all you have to do is
 /util/Constant/
 API_KEY = "Your API KEY"
 ```
-you can follow this path and use the API you obtained from api-football or rapidapi.
+you can follow this path and use the API you obtained from [api-football](https://www.api-football.com/documentation) or [rapidapi](https://rapidapi.com/).
 
 ### Libraries and tools
  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
